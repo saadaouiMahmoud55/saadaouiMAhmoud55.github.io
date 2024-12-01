@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان رأي حول الموقع</title>
+    <!-- Intégration de la font Google Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+
+    <header class="header py-3 bg-dark text-white text-center">
+        <h1 class="header-title">استبيان رأي حول الموقع الإلكتروني</h1>
+    </header>
+
+    <main class="main container mt-5">
+        <form method="post" novalidate class="form">
+
+            <div class="mb-3">
+                <label for="firstName" class="form-label">الاسم الأول:</label>
+                <input type="text" id="firstName" name="firstName" required pattern="[أ-يa-zA-Z ]{2,}" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="lastName" class="form-label">الاسم الأخير:</label>
+                <input type="text" id="lastName" name="lastName" required pattern="[أ-يa-zA-Z ]{2,}" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="dob" class="form-label">تاريخ الميلاد:</label>
+                <input type="date" id="dob" name="dob" required class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">الجنس:</label><br>
+                <input type="radio" id="male" name="gender" value="ذكر" required class="form-check-input">
+                <label for="male" class="form-check-label">ذكر</label>
+                <input type="radio" id="female" name="gender" value="أنثى" required class="form-check-input">
+                <label for="female" class="form-check-label">أنثى</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="governorate" class="form-label">المحافظة:</label>
+                <select id="governorate" name="governorate" required class="form-select">
+                    <option value="">اختر...</option>
+                    <option value="تونس">تونس</option>
+                    <option value="أريانة">أريانة</option>
+                    <option value="بن عروس">بن عروس</option>
+                    <option value="منوبة">منوبة</option>
+                    <option value="سوسة">سوسة</option>
+                    <option value="صفاقس">صفاقس</option>
+                    <option value="قابس">قابس</option>
+                    <option value="جندوبة">جندوبة</option>
+                    <option value="مدنين">مدنين</option>
+                    <option value="تطاوين">تطاوين</option>
+                    <option value="المنستير">المنستير</option>
+                    <option value="المهدية">المهدية</option>
+                    <option value="قصر هلال">قصر هلال</option>
+                    <option value="سليانة">سليانة</option>
+                    <option value="الكاف">الكاف</option>
+                    <option value="زغوان">زغوان</option>
+                    <option value="الطهي">الطهي</option>
+                    <option value="بنزرت">بنزرت</option>
+                    <option value="القيروان">القيروان</option>
+                    <option value="قعفور">قعفور</option>
+                    <option value="باجة">باجة</option>
+                    <option value="نابل">نابل</option>
+                    <option value="سيدي بوزيد">سيدي بوزيد</option>
+                    <option value="مدنين">مدنين</option>
+                    <option value="توزر">توزر</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="feedback" class="form-label">رأيكم في الموقع:</label>
+                <textarea id="feedback" name="feedback" rows="4" required minlength="10" class="form-control"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">تقييم الموقع (من 1 إلى 5):</label><br>
+                <input type="radio" id="rating1" name="rating" value="1" required class="form-check-input">
+                <label for="rating1" class="form-check-label">1</label>
+                <input type="radio" id="rating2" name="rating" value="2" required class="form-check-input">
+                <label for="rating2" class="form-check-label">2</label>
+                <input type="radio" id="rating3" name="rating" value="3" required class="form-check-input">
+                <label for="rating3" class="form-check-label">3</label>
+                <input type="radio" id="rating4" name="rating" value="4" required class="form-check-input">
+                <label for="rating4" class="form-check-label">4</label>
+                <input type="radio" id="rating5" name="rating" value="5" required class="form-check-input">
+                <label for="rating5" class="form-check-label">5</label>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">إرسال</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer py-3 bg-dark text-white text-center">
+        <p class="footer-text">© 2024 موقع النظام الشمسي</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
